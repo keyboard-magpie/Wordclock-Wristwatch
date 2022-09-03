@@ -47,7 +47,7 @@ boolean checkDst() {
   DateTime RTCTime = RTC.now();
 
   //Get the day of the week. 0 = Sunday, 6 = Saturday
-  int previousSunday = RTCTime.day() - RTCTime.dayOfTheWeek();
+  int previousSunday = RTCTime.day() - RTCTime.dayOfWeek();
 
   boolean dst = false; //Assume we're not in DST
   if (RTCTime.month() > 3 && RTCTime.month() < 11) dst = true; //DST is happening!
